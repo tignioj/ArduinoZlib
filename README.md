@@ -5,9 +5,9 @@
 ```cpp
 size_t size = stream->available(); // 还剩下多少数据没有读完？
 uint8_t inbuff[size]; // 准备一个数组来装流数据，有多少装多少
-stream->readBytes(inbuff, size); // 将http流数据写道inbuff中
+stream->readBytes(inbuff, size); // 将http流数据写入inbuff中
 outbuf=(uint8_t*)malloc(sizeof(uint8_t)*15000); // 解压这些流预计需要的空间大小，这里很难估算。
-uint32_t outprintsize=0; // 这个值在调用解压方法后会被改变为解压后的大小。
+uint32_t outprintsize=0; // 解压后多大？在调用解压方法后会被赋值。
 // 调用解压函数
 int result=ArduinoZlib::libmpq__decompress_zlib(buff, readBytesSize, outbuf, 15000,outprintsize);
 // 输出解密后的数据到控制台。
