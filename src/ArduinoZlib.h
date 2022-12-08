@@ -1,8 +1,9 @@
 
 #ifndef _ARDUINO_ZLIB_
 #define _ARDUINO_ZLIB_
-#include "iostream"
-
+#include <Arduino.h>
+#include "zlib.h"
+#include "zconf.h"
 
 class ArduinoZlib {
 

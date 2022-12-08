@@ -1,7 +1,6 @@
 #include "ArduinoZlib.h"
-#include "zlib.h"
-#include "zconf.h"
-#include <Arduino.h>
+
+
 
 ArduinoZlib::ArduinoZlib(){
 	
@@ -10,6 +9,7 @@ static void error(String msg) {
   Serial.print("!!!ERROR:");
   Serial.println(msg);
 }
+
 //https://www.programcreek.com/cpp/?code=Looking4Group%2FL4G_Core%2FL4G_Core-master%2Ftools%2Flibmpq%2Flibmpq%2Fextract.c
 int32_t ArduinoZlib::libmpq__decompress_zlib(uint8_t *in_buf, uint32_t in_size, uint8_t *out_buf, uint32_t out_size, uint32_t &outprintsize) {
 
